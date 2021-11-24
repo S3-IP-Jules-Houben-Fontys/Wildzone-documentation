@@ -52,4 +52,24 @@ Met dit conceptueel model kunnen we vervolgens een inschatting gaan maken hoe va
 Verder zorgt het maken van microservices ervoor dat de entiteiten niet van elkaar afhankelijk zijn. Stel er gaat iets fout bij de service van de leverancier, dan werkt de service voor producten wel nog gewoon, waardoor de gebruikers de applicatie kunnen blijven gebruiken. Welliswaar zonder informatie over leveranciers, maar de applicatie ligt niet compleet uit de lucht.
 
 
-<h2 id="microservice-overzicht"> 3. Microservices Overzicht </h2>
+<h2 id="microservice-overzicht"> 3. Project Overzicht </h2>
+
+Om duidelijkheid te creeren in dit project, wordt er gebruik gemaakt van de zogenaamde *C4-method*. De C4 methode is ontworpen om de software architectuur overzichtelijk in kaart te brengen voor zowel opdrachtgever als voor software engineers. De C4 methode bestaat uit 4 verschillende diagrammen, waarbij ieder diagram net iets dieper inzoomt op de software die ontwikkeld moet worden. De volgende onderdelen komen voor in de C4 methode:
+
+- Context (level 1, geschikt voor iedereen; er is geen tot weinig technische kennis nodig om het diagram volledig te kunnen begrijpen)
+- Containers (level 2, geschikt voor mensen met eenvoudige technische kennis; er worden technische ondedelen benoemd, maar moet begrijpelijk zijn voor mensen met eenvoudige technische kennis)
+- Components (level 3, geschikt voor mensen met technische kennis; geeft een algemeen duidelijk beeld uit welke onderdelen/microservices het software systeem bestaat. Niet geschikt voor opdrachtgevers)
+- Components (level 4, geschikt voor software egineers; geeft de werking van één enkele microservice weer tot in de details. Alleen geschikt voor software egineers)
+
+### Context
+
+Zie onderstaande diagram voor de context van dit software systeem.
+
+![Wildzone-C1 System Context diagram drawio (1)](https://user-images.githubusercontent.com/73841047/143226318-b2d6bd32-7f50-471a-b701-51b0dc7680f6.png)
+
+### Containers
+
+Als we iets verder inzoomen op het software systeem dat ontwikkeld moet worden, dan komen we uit bij de onderstaande diagram:
+
+
+
