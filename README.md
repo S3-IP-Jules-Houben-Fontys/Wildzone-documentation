@@ -20,6 +20,7 @@ Deze organisatie is opgedeeld in verschillende repositories. In elke repository 
 1. [Gedistribueerde Software](#gedistribueerde-software)
 2. [Conceptueel Model](#conceptueel-model)
 3. [Microservices Overzicht](#microservice-overzicht)
+4. [Software Release Managament & het gebruik van Github](#github)
 
 <h2 id="gedistribueerde-software"> 1. Gedistribueerde Software </h2>
 
@@ -63,7 +64,7 @@ Om duidelijkheid te creeren in dit project, wordt er gebruik gemaakt van de zoge
 
 ---
 
-### Context
+### C1: Context
 
 Zie onderstaande diagram voor de context van dit software systeem.
 
@@ -71,7 +72,7 @@ Zie onderstaande diagram voor de context van dit software systeem.
 
 ---
 
-### Containers
+### C2: Containers
 
 Als we iets verder inzoomen op het software systeem dat ontwikkeld moet worden, dan komen we uit bij de onderstaande diagram:
 
@@ -79,4 +80,25 @@ Als we iets verder inzoomen op het software systeem dat ontwikkeld moet worden, 
 
 ---
 
-### Components
+### C3: Components
+
+![Wildzone-C3 Component diagram drawio](https://user-images.githubusercontent.com/73841047/143583232-469492a1-5c13-49ce-8662-ad572f6668a3.png)
+
+---
+
+<h2 id="github">Software Release Managament & het gebruik van Github</h2>
+
+Om ervoor te zorgen dat er geen werk verloren gaat, zal Github gebruikt worden om alle projecten op te slaan, bugs te melden, automatisch te laten testen en bij geslaagde tests het project te Dockerizen en plaatsen op Docker hub. Software Release Management moet het saaie en repetitieve gedeelte van software development weghalen/verminderen. Zo kan het installeren van omgevingen en testen geautomatiseerd worden. Dit scheelt een hoop tijd; tijd die beter gestoken kan worden in het schrijven van code.
+
+Tijdens dit proces worden de stappen 1 tot en met 7 doorlopen. Zie onderstaande afbeelding. 
+
+<p align="center">
+  <img width="350" src="https://user-images.githubusercontent.com/73841047/143584767-f578966d-f21a-4a57-91fb-782bc29292c7.jpg">
+</p>
+
+### Software Branches
+
+Om overzicht te houden welke code naar github gepusht worden, zal er gebruik worden gemaakt van zogenaamde *branches*. In semester 2 mocht alles op de *main* branch geplaatst worden, echter levert dit snel problemen op als je met meerdere developers moet samenwerken of wanneer een deel software toch niet werkt zoals gehoopt. Als namelijk alleen de main branch gebruikt wordt, dan kun je niet eenvoudig een commit terug gaan; je verliest alle code tot de commit waarnaar je terug wilt gaan. Verschillende branches kunnen dit voorkomen. Zie onderstaande afbeelding om te zien hoe de branch set-up eruit ziet in dit project.
+
+![Wildzone-Software Branches drawio](https://user-images.githubusercontent.com/73841047/143588680-91d9ee14-e0ad-4790-bcad-021cdfcdaf89.png)
+
