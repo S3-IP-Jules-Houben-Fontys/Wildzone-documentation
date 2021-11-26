@@ -61,15 +61,22 @@ Om duidelijkheid te creeren in dit project, wordt er gebruik gemaakt van de zoge
 - Components (level 3, geschikt voor mensen met technische kennis; geeft een algemeen duidelijk beeld uit welke onderdelen/microservices het software systeem bestaat. Niet geschikt voor opdrachtgevers)
 - Components (level 4, geschikt voor software egineers; geeft de werking van één enkele microservice weer tot in de details. Alleen geschikt voor software egineers)
 
+---
+
 ### Context
 
 Zie onderstaande diagram voor de context van dit software systeem.
 
 ![Wildzone-C1 System Context diagram drawio (2)](https://user-images.githubusercontent.com/73841047/143442490-e2176763-8095-4cc2-8e0b-d8d9d8ba5ce7.png)
 
+---
+
 ### Containers
 
 Als we iets verder inzoomen op het software systeem dat ontwikkeld moet worden, dan komen we uit bij de onderstaande diagram:
 
+![Wildzone-C2 Container diagram drawio (1)](https://user-images.githubusercontent.com/73841047/143568140-c76727dd-a143-4314-a849-59b308bba449.png)
 
+---
 
+### Components
