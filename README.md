@@ -98,7 +98,14 @@ Tijdens dit proces worden de stappen 1 tot en met 7 doorlopen. Zie onderstaande 
 
 ### Software Branches
 
-Om overzicht te houden welke code naar github gepusht worden, zal er gebruik worden gemaakt van zogenaamde *branches*. In semester 2 mocht alles op de *main* branch geplaatst worden, echter levert dit snel problemen op als je met meerdere developers moet samenwerken of wanneer een deel software toch niet werkt zoals gehoopt. Als namelijk alleen de main branch gebruikt wordt, dan kun je niet eenvoudig een commit terug gaan; je verliest alle code tot de commit waarnaar je terug wilt gaan. Verschillende branches kunnen dit voorkomen. Zie onderstaande afbeelding om te zien hoe de branch set-up eruit ziet in dit project.
+Om overzicht te houden welke code naar github gepusht worden, zal er gebruik worden gemaakt van zogenaamde *branches*. In semester 2 mocht alles op de *main* branch geplaatst worden, echter levert dit snel problemen op als je met meerdere developers moet samenwerken of wanneer een deel van de code toch niet werkt zoals gehoopt. Als namelijk alleen de main branch gebruikt wordt, dan kun je niet eenvoudig een paar commits terug gaan; je verliest alle code tot de commit waarnaar je terug wilt gaan. Verschillende branches kunnen dit voorkomen. Zie onderstaande afbeelding om te zien hoe de branch set-up eruit ziet in dit project.
 
 ![Wildzone-Software Branches drawio](https://user-images.githubusercontent.com/73841047/143588680-91d9ee14-e0ad-4790-bcad-021cdfcdaf89.png)
 
+#### Main branch
+
+Op de main branch staat de basis van het project. Zodra er een merge request gemaakt wordt op de main branch, dan zullen alle tests worden doorlopen en als deze tests vervolgens allemaal slagen dan zal het project omgezet worden naar een image en geüpload worden naar [deze Docker Hub repositories](https://hub.docker.com/u/jjuless). 
+
+#### Development branch
+
+Vanuit de main branch wordt de *development* branch aangemaakt. Op deze branch worden de nieuwste
