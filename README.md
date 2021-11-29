@@ -93,8 +93,10 @@ Om ervoor te zorgen dat er geen werk verloren gaat, zal Github gebruikt worden o
 Tijdens dit proces worden de stappen 1 tot en met 7 doorlopen. Zie onderstaande afbeelding. 
 
 <p align="center">
-  <img width="350" src="https://user-images.githubusercontent.com/73841047/143584767-f578966d-f21a-4a57-91fb-782bc29292c7.jpg">
+  <img width="350" id="srm" src="https://user-images.githubusercontent.com/73841047/143584767-f578966d-f21a-4a57-91fb-782bc29292c7.jpg">
 </p>
+
+---
 
 ### Software Branches
 
@@ -108,4 +110,45 @@ Op de main branch staat de basis van het project. Zodra er een merge request gem
 
 #### Development branch
 
-Vanuit de main branch wordt de *development* branch aangemaakt. Op deze branch worden de nieuwste
+Vanuit de main branch wordt de *development* branch aangemaakt. Op deze branch worden de nieuwste features en afgemaakte [userstories](https://dev.azure.com/461249/S3%20IP%20Jules%20Houben) geplaatst. Op de development branch zullen wel tests uitgevoerd worden, maar geen images gemaakt worden of andere publicaties.
+
+#### Userstory branch
+
+Vanuit de development branch wordt de *userstory* branch aangemaakt. De branch krijgt de naam van de userstory die gemaakt gaat worden. Zo is eenvoudig terug te zoeken in het [Azure board](https://dev.azure.com/461249/S3%20IP%20Jules%20Houben) om welke userstory het gaat en hoe ver het zit met de development hiervan.  Op de userstory branch zullen geen tests uitgevoerd worden en geen images gemaakt worden.
+
+#### Bugfix / Release branch
+
+Vanuit de main branch zal de *release* branch aangemaakt worden. Op deze branch worden geen nieuwe functies toegevoegd, maar kunnen wel bugfixes worden aangemaakt. Mocht het nu blijken dat er fouten in de release zaten, dan kunnen deze fouten op deze branch hersteld worden. Mochten het hele grote bugs zijn, groot genoeg voor een eigen userstory, dan zullen deze opgelost worden via de **development -> userstory** branch. Op bugfix / release zullen alleen testen uitgevoerd worden.
+
+---
+
+### CI/CD pipelines
+
+#### **CI** (**C**ontinuous **I**integration)
+
+Zorgt ervoor dat de kwaliteit van de code aan vastgestelde eisen moet voldoen, anders wordt de code afgekeurd. Deze eisen kunnen zeer verschillend zijn. Een eis kan bijvoorbeeld zijn dat de code een end-2-end test moet doorlopen, voordat de code bij de rest van het project gevoegd kan worden. Een andere eis kan zijn dat de code in dezelfde stijl geschreven moet worden, zo moeten bijvoorbeeld variabelen aan bepaalde eisen voldoen of mogen comments in de code alleen tekst bevatten en geen uitgezette code bevatten. Zodra de nieuwe code gepusht wordt naar de development of main branch, dan zal de code dus eerst succesvol door deze eisen/tests moeten lopen voordat deze geaccepteerd worden.
+
+#### **CD** (**C**ontinuous **D**elivery)
+
+Zorgt ervoor dat de developer geen moeite meer hoef te doen voor het publiceren van de software; dit wordt automatisch gedaan door de CD pipeline. Als alle tests succesvol zijn doorlopen dan zal de software automatisch op klaarstaan om geplaatst te worden op een server. Hierdoor worden de stappen [3 tot en met 6](#srm) geautomatiseerd en hoeft de developer niets meer handmatig te publiceren. 
+
+#### Het verschil tussen CI & CD
+
+Onderstaande afbeelding geeft een goed en duidelijk beeld over een complete CI/CD pipeline eruit ziet. Het belangrijkste verschil is dta CI ervoor zorgt dat de code in de repository terecht kan komen nadat het alle testen succesvol heeft doorlopen. 
+
+CD neemt vervolgens deze code uit de repository, kan hier verschillende testen op doen en de software vervolgens productie klaar te maken. In het geval van Continuous Deployment, dan wordt de code ook nog eens direct geplaatst in de productie-omgeving.
+
+<br>
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/73841047/143909565-0276f1c8-2641-4f51-9500-639e1be32c15.png">
+</p>
+<br>
+
+
+#### CI/CD pipelines in dit project
+
+
+
+
+
+
