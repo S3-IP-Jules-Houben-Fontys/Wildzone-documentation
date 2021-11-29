@@ -124,13 +124,29 @@ Vanuit de main branch zal de *release* branch aangemaakt worden. Op deze branch 
 
 ### CI/CD pipelines
 
-#### **CI** (**C**ontinuous **I**integration)
+Het doel van CI/CD pipelines is om tijdrovend werk te automatiseren door de computer. Dit zorgt ervoor dat er geen manuren verspild worden aan werk wat prima door een computer gedaan kan worden. Verder maakt een mens fouten, een computer gebeurt dat vrijwel nooit. Ook moeten CI/CD pipelines ervoor zorgen dat code vaker gepubliceerd wordt voor end-users. Vroeger werd er eens in de 5 maanden een update uitgebracht waar alle bugs werden verholpen en nieuwe features toegevoegd. Tegenwoordig is het de standaard om zo vaak mogelijk, het liefts meerdere malen per dag, zo'n update uit te voeren. Zo worden bugs sneller verholpen en kunnen nieuwe features vrijwel direct getest worden, om zo de kwaliteit van de software naar een hoger niveau te brengen.
+
+Een vrij groot deel van de software release management kan geautomatiseerd worden. Als we kijken naar de software cycle, dan zien we dat de [stappen 3 tot en met 6](#srm) geautomatiseerd kunnen worden. Stappen die kostbare tijd in beslag nemen, tijd die beter gestoken kan worden in het ontwikkelen van nog meer en nog betere software.
+Momenteel kunnen dus de volgende delen geautomatiseerd worden:
+- Software Build
+- Review
+- Test
+- Deployment
+
+#### **CI** (**C**ontinuous **I**ntegration)
 
 Zorgt ervoor dat de kwaliteit van de code aan vastgestelde eisen moet voldoen, anders wordt de code afgekeurd. Deze eisen kunnen zeer verschillend zijn. Een eis kan bijvoorbeeld zijn dat de code een end-2-end test moet doorlopen, voordat de code bij de rest van het project gevoegd kan worden. Een andere eis kan zijn dat de code in dezelfde stijl geschreven moet worden, zo moeten bijvoorbeeld variabelen aan bepaalde eisen voldoen of mogen comments in de code alleen tekst bevatten en geen uitgezette code bevatten. Zodra de nieuwe code gepusht wordt naar de development of main branch, dan zal de code dus eerst succesvol door deze eisen/tests moeten lopen voordat deze geaccepteerd worden.
 
 #### **CD** (**C**ontinuous **D**elivery)
 
 Zorgt ervoor dat de developer geen moeite meer hoef te doen voor het publiceren van de software; dit wordt automatisch gedaan door de CD pipeline. Als alle tests succesvol zijn doorlopen dan zal de software automatisch op klaarstaan om geplaatst te worden op een server. Hierdoor worden de stappen [3 tot en met 6](#srm) geautomatiseerd en hoeft de developer niets meer handmatig te publiceren. 
+
+Vaak worden de termen Continuous Delivery en Continious Deployment door elkaar gehaald, echter hebben ze niet exact dezelfde termen. Bij Continuous Delivery moet een developer of systeem beheerder nog handmatig de code deployen in de productie omgeving. Bij Continious Deployment wordt de laatste stap van deze pipeline ook nog geautomatiseerd; er is geen developer of systeem beheerder meer nodig om de code op de server te krijgen. Zie de afbeelding hier beneden voor een visuele uitleg.
+
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/73841047/143922528-a25fbc75-3c02-4afc-8d81-6619d516aa53.png">
+</p>
+
 
 #### Het verschil tussen CI & CD
 
@@ -146,6 +162,12 @@ CD neemt vervolgens deze code uit de repository, kan hier verschillende testen o
 
 
 #### CI/CD pipelines in dit project
+
+<h1>INVULLING VOLGT</H1>
+
+---
+
+### Containerized Software
 
 
 
