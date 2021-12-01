@@ -5,6 +5,8 @@
 
 **Alle documentatie omtrent het Fontys Eindhoven Software Engineering semester 3 Wildzone webshop project van Jules Houben.**
 
+---
+
 ## Inleiding
 In dit project wil ik een fictieve webshop gaan bouwen voor verschillende kleding artikelen. Het doel is om hiermee aan te tonen dat ik kan laten zien dat ik begrijp hoe een JavaScript front-end werkt, dat ik dit kan combineren met een OO gebaseerde back-end taal en dat de software gedistribueerd is zodat het een grote hoeveelheid aan gebruikers tevreden kan stellen. Om dit proces voor de gebruiker zo snel en efficiënt mogelijk te maken zal er gebruik worden gemaakt van asynchrone communicatie om te voorkomen dat een gebruiker lang moet wachten. In combinatie van een intuïtieve UX moet dit ervoor zorgen dat de gebruikservaring van de website zo optimaal mogelijk is. 
 De data van de gebruiker zal opgeslagen worden in een relationele database. Aangezien dit gevoelige informatie is zal er gekeken moeten worden naar verschillende beveiligingsopties om de data van de gebruiker te kunnen beschermen. 
@@ -12,15 +14,26 @@ De data van de gebruiker zal opgeslagen worden in een relationele database. Aang
 ## Leeswijzer
 Deze organisatie is opgedeeld in verschillende repositories. In elke repository zit slechts één service. In de ReadMe van iedere repository kun je zien hoe de microservice opgestart kan worden, hoe deze werkt en hoe deze getest wordt. Alle inhoudelijke documentatie betreffende keuzes van programmeertalen en frameworks kun je lezen in de huidige repository. In deze ReadMe kun je de algemene lijnen van het project zien. Klik onder het volgende kopje op de verschillende onderwerpen als je meer te weten wilt komen over dat onderwerp.
 
+---
+
 ## Content van de documentatie repository
-- [Front-end](https://github.com/S3-IP-Jules-Houben-Fontys/Wildzone-documentation/blob/main/front-end.md)
-- Back-end
+- [UX-onderzoek](https://github.com/S3-IP-Jules-Houben-Fontys/Wildzone-documentation/blob/main/front-end.md)
+- [Beveiliging onderzoek]()
+
+---
 
 ## Inhoudsopgave ReadMe Wildzone-documentation
 1. [Gedistribueerde Software](#gedistribueerde-software)
 2. [Conceptueel Model](#conceptueel-model)
-3. [Microservices Overzicht](#microservice-overzicht)
-4. [Software Release Managament & het gebruik van Github](#github)
+3. [Project Overzicht](#project-overzicht)
+4. [Gedistribueerde communicatie](#gedistribueerde-communicatie)
+5. [Front-end Development](#front-end-development)
+6. [Back-end Development](#back-end-development)
+7. [Data Behoud](#data-behoud)
+8. [Kwaliteits Garantie](#kwaliteits-garantie)
+9. [Software Release Managament & het gebruik van Github](#github)
+
+---
 
 <h2 id="gedistribueerde-software"> 1. Gedistribueerde Software </h2>
 
@@ -53,7 +66,7 @@ Met dit conceptueel model kunnen we vervolgens een inschatting gaan maken hoe va
 Verder zorgt het maken van microservices ervoor dat de entiteiten niet van elkaar afhankelijk zijn. Stel er gaat iets fout bij de service van de leverancier, dan werkt de service voor producten wel nog gewoon, waardoor de gebruikers de applicatie kunnen blijven gebruiken. Welliswaar zonder informatie over leveranciers, maar de applicatie ligt niet compleet uit de lucht.
 
 
-<h2 id="microservice-overzicht"> 3. Project Overzicht </h2>
+<h2 id="project-overzicht"> 3. Project Overzicht </h2>
 
 Om duidelijkheid te creeren in dit project, wordt er gebruik gemaakt van de zogenaamde *C4-method*. De C4 methode is ontworpen om de software architectuur overzichtelijk in kaart te brengen voor zowel opdrachtgever als voor software engineers. De C4 methode bestaat uit 4 verschillende diagrammen, waarbij ieder diagram net iets dieper inzoomt op de software die ontwikkeld moet worden. De volgende onderdelen komen voor in de C4 methode:
 
