@@ -169,6 +169,14 @@ CD neemt vervolgens deze code uit de repository, kan hier verschillende testen o
 
 ### Containerized Software
 
+In dit project wordt Docker gebruikt. Docker zorgt ervoor dat het draaien van code op een server heel gemakkelijk gemaakt wordt. Vroeger moest je eerst alle software en besturingssystemen installeren op je eigen computer, server of virtuele server. Dit zorgt voor veel nadelen want:
+
+- Je moet iedere keer de omgeving opnieuw instellen, voor zowel het testen als de live omgeving. Laat staan wanneer je applicatie zo populair is dat de server het niet aan kan en er dus meerdere servers geïnstalleerd moeten worden om de vraag aan te kunnen. Voor iedere server moet het installatie process exact opnieuw worden doorlopen.
+- Als je veel moet installeren en instellen dan wordt de kans op fouten groter. Als de server namelijk niet precies is ingesteld zoals gehoopt, dan kan het zijn dat de applicatie niet (goed) draait. 
+
+Met containerized software kun je een zogenaamde *image* maken van je applicatie. Je slaat als het ware het bouwplan op van de applicatie. Zo'n bouwplan kun je eenvoudig onbeperkt hergebruiken. Van dit bouwplan worden de instructies uitgevoerd, om zo de applicatie na te bouwen. Je kunt dit bouwplan extra instructies meegeven zodat je zeker weet dat de applicatie later draait op de gewenste manier.
+
+
 
 
 
