@@ -176,9 +176,6 @@ In dit project wordt Docker gebruikt. Docker zorgt ervoor dat het draaien van co
 
 Met containerized software kun je een zogenaamde *image* maken van je applicatie. Je slaat als het ware het bouwplan op van de applicatie. Zo'n bouwplan kun je eenvoudig onbeperkt hergebruiken. Van dit bouwplan worden de instructies uitgevoerd, om zo de applicatie na te bouwen. Je kunt dit bouwplan extra instructies meegeven zodat je zeker weet dat de applicatie later draait op de gewenste manier.
 
-
-
-
-
-
-
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/73841047/144228763-267c84fa-9769-4004-b7a1-efac9280d52a.png">
+</p>
