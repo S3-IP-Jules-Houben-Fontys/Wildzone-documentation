@@ -174,8 +174,27 @@ In dit project wordt Docker gebruikt. Docker zorgt ervoor dat het draaien van co
 - Je moet iedere keer de omgeving opnieuw instellen, voor zowel het testen als de live omgeving. Laat staan wanneer je applicatie zo populair is dat de server het niet aan kan en er dus meerdere servers geïnstalleerd moeten worden om de vraag aan te kunnen. Voor iedere server moet het installatie process exact opnieuw worden doorlopen.
 - Als je veel moet installeren en instellen dan wordt de kans op fouten groter. Als de server namelijk niet precies is ingesteld zoals gehoopt, dan kan het zijn dat de applicatie niet (goed) draait. 
 
-Met containerized software kun je een zogenaamde *image* maken van je applicatie. Je slaat als het ware het bouwplan op van de applicatie. Zo'n bouwplan kun je eenvoudig onbeperkt hergebruiken. Van dit bouwplan worden de instructies uitgevoerd, om zo de applicatie na te bouwen. Je kunt dit bouwplan extra instructies meegeven zodat je zeker weet dat de applicatie later draait op de gewenste manier.
+Met containerized software kun je een zogenaamde *image* maken van je applicatie. Je slaat als het ware het bouwplan op van de applicatie. Zo'n bouwplan kun je eenvoudig onbeperkt hergebruiken. Van dit bouwplan worden de instructies uitgevoerd, om zo de applicatie op te bouwen. Je kunt dit bouwplan extra instructies meegeven zodat je zeker weet dat de applicatie later draait op de gewenste manier.
 
 <p align="center">
   <img src="https://user-images.githubusercontent.com/73841047/144228763-267c84fa-9769-4004-b7a1-efac9280d52a.png">
 </p>
+
+Het voordeel van de image/het bouwplan is dat je maar één keer hoeft te bepalen waaruit de image bestaat en welke omgevingsvariabelen deze nodig heeft. Je kunt dus heel eenvoudig de image vaker uitvoeren. Zodra je de image laat builden dan wordt er een container aangemaakt. In deze container draait de applicatie. Een container heeft geen besturingssysteem; het maakt gebruik van de kernel van het hostsysteem. Je hoeft dus niet voor elke container een OS te installeren. Dit scheelt een hele hoop installeer werk, kans op fouten en opslag.
+
+Aangezien de container gebruik maakt van de kernel van het OS van het hostsysteem, maakt het niet uit op welk OS de container draait. Dit maakt de compatibiliteit een stuk groter.
+
+Omdat elke applicatie in zijn eigen container draait, leent het containerizen van software zich goed voor microservices. Deze microservices moeten tenslotte allemaal los van elkaar kunnen draaien, daarom kun je elke service eenvoudig in een eigen container stoppen. Wanneer je je software systeem wilt uitbreiden dan voeg je eenvoudig een microservice toe in een nieuwe container. Deze service staat los van alle andere containers, dus mocht er iets mis zijn met de gemaakte code in de container, dan heeft dit niet direct invloed op het presteren van de andere microservices/containers.
+
+Tot slot kun je alle containers heel eenvoudig en snel opstarten met docker-compose. Dit zorgt ervoor dat alle containers aangezet worden en met de juiste omgevingsvariabelen opgestart worden. 
+
+---
+
+### Configuration by Code
+
+(Bijna) Iedere software moet van tevoren ingesteld worden met voorwaarden om te voldoen aan de eisen. Stel ik wil verbinding maken met een database, dan moet ik aangeven waar deze database gehost wordt, wat de naam is van de database, wat het wachtwoord is etc. Als dit allemaal hardcoded is en er komt een verandering, dan moet ik gaan zoeken waar ik deze gegevens allemaal heb ingevuld. Als oplossing voor dit probleem zijn environment variables bedacht. Deze environment variables worden opgeslagen in een bestand genaamd .ENV. Dit bestand wordt meestal niet volledig meegestuurd naar een repository, hier kunnen namelijk wachtwoorden inzitten. Deze wachtwoorden zouden dan te lezen zijn voor iedereen met toegang tot de repository.
+
+Vaak wordt er dan een sample.env meegestuurd. Hierin staan wel welke variabelen er gebruikt worden in de applicatie, maar niet welke waardes deze variabelen hebben.
+
+Het voordeel van de configuratie opslaan in de repository is dat je kunt bijhouden wanneer er wat is aangepast door wie. Verder heb je alle code dan op één plek staan. 
+
