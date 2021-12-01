@@ -99,6 +99,43 @@ Als we iets verder inzoomen op het software systeem dat ontwikkeld moet worden, 
 
 ---
 
+<h2 id="gedistribueerde-software">Gedistribueerde communicatie</h2>
+
+In dit project wordt er gebruik gemaakt van microservices. Dit houdt in dat alle services los van elkaar kunnen draaien, zonder dat ze van elkaars bestaan afweten. Echter moeten de verschillende services wel met elkaar kunnen communiceren. Want hoe kunnen ze anders ervoor zorgen dat er in het magazijn de melding komt dat product *X* is gekocht door klant Peter?
+
+Er zijn een paar manieren om te communiceren met een microservice. De bekendste manier is JSON. JSON (JavaScrip Object Notation) is eenvoudig, snel, gratis en werkt met vrijwel elke back-end taal. Daarbij wordt het ondersteund door elke browser.
+
+Een andere manier is XML. XML (Extensible Markup Language) was vroeger een veel gebruikte data overbrenger tussen systemen. Echter is XML bulky en langzaam in ontleden, wat ervoor zorgt dat de laadsnelheid flink omlaag gaat en de opslag omhoog. Verder maakt XML geen gebruik van tags, dus moet de code heel goed gedocumenteerd worden, aangezien de waardes niet altijd vanzelfsprekend zijn.
+
+Voor dit project wordt JSON gebruikt omdat hier meer voordelen aan zitten als aan XML. Daarbij is JSON een EMCA standaard.
+
+### Wat is REST?
+
+REST staat voor **RE**presentational **S**tate **T**ransfer en is een architecturele stijl voor een [API](#api). REST is een nette en eenvoudige naam om te zeggen dat de applicatie de standaard HTTP acties accepteert. Denk hierbij aan Creat, Read, Update, Delete etc. Door middel van de URL kunnen de verschillende acties uitgevoerd worden.
+
+<h3 id="api">Wat is een API?</h3>
+
+API staat voor **A**pplication **P**rogramming **I**nterface en zorgt ervoor dat de opgevraagde data wordt opgehaald en afgeleverd. Je moet de API zien als een serveerder in een restaurant. Via het menu kun je zien wat je allemaal kunt vragen aan de serveerder. De keuken is de database in dit systeem; daar komt namelijk alle data, in dit geval het eten, vandaan. Je moet echter nog een manier hebben om je bestelling naar de keuken te krijgen en vervolgens je eten terug bij jou op tafel. Hiervoor dient de serveerder/api. Je geeft door welke data, in dit geval eten, je wilt hebben. De serveerder geeft het door aan de database/keuken en komt terug met de opgevraagde bestelling/data. 
+
+Een API communiceert dus tussen twee services.
+
+<h2 id="front-end-development">Front-end Development</h2>
+<h1>INVULLING VOLGT</H1>
+
+---
+<h2 id="back-end-development">Back-end Development</h2>
+<h1>INVULLING VOLGT</H1>
+
+---
+<h2 id="data-behoud">Data Behoud</h2>
+<h1>INVULLING VOLGT</H1>
+
+---
+<h2 id="kwaliteits-garantie">Kwaliteits Garantie</h2>
+<h1>INVULLING VOLGT</H1>
+
+---
+
 <h2 id="github">Software Release Managament & het gebruik van Github</h2>
 
 Om ervoor te zorgen dat er geen werk verloren gaat, zal Github gebruikt worden om alle projecten op te slaan, bugs te melden, automatisch te laten testen en bij geslaagde tests het project te Dockerizen en plaatsen op Docker hub. Software Release Management moet het saaie en repetitieve gedeelte van software development weghalen/verminderen. Zo kan het installeren van omgevingen en testen geautomatiseerd worden. Dit scheelt een hoop tijd; tijd die beter gestoken kan worden in het schrijven van code.
