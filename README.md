@@ -3,6 +3,9 @@
   <img src="https://user-images.githubusercontent.com/73841047/142646426-e43dc258-e831-43ce-ae1f-9ab1f70a7ea7.png">
 </p>
 
+<p align="center">
+<img src="https://user-images.githubusercontent.com/73841047/144439724-11d1bef7-fd99-49d1-a7b5-11846b5c1bdc.gif">
+</p>
 **Alle documentatie omtrent het Fontys Eindhoven Software Engineering semester 3 Wildzone webshop project van Jules Houben.**
 
 ---
