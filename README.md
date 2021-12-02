@@ -275,8 +275,32 @@ Frameworks zijn, zoals eerder genoemd in het hoofdstuk [Front-end Development](#
 
 Back-end frameworks zijn goed te vergelijken met front-end frameworks. Het grote verschil met een front-end framework is dat het niet gaat om de communicatie met de gebruiker, maar communicatie met de database. Een back-end framework zal dus vooral het verbinden en het verkrijgen van data van en met een database eenvoudiger maken.
 
+Dit zijn volgens [Back4App](https://blog.back4app.com/backend-frameworks/) De top 10 back-end frameworks:
+
+|  **Framework** | **Programming Language**  | **Famous Use Cases** |
+|---|---|---|
+|  Django |  Python | Instagram, Pinterest, Coursera  |
+|  Laravel |  PHP | Deltanet Travel, Neighborhood Lender, MyRank  |
+|  Ruby on Rails | Ruby  | ZendDesk, Shopify, GitHub  |
+|  ExpressJS | NodeJS  | MySpace, GeekList, Storify  |
+|  CakePHP |  PHP |  Mapme, Educationunlimited, Followmy Tv |
+| Flask  | Python  | Red Hat, Rackspace, Reddit  |
+| Asp .NET  | C#  | Microsoft, Godaddy, Ancestry  |
+| Spring Boot  | Java  | 	Trivago, Via Varejo, Intuit  |
+| Koa | NodeJS| - |
+| Phoenix  | 	Elixir  | Financial Times, Fox 10, ABC15  |
+
+Ondanks dat bovenstaande tabel van een Amerikaanse bron is, zijn de er veel *Famous Use Cases* ook hier bekend als bedrijf of applicaite en gebruiken ze populaire frameworks voor hun back-end.
+
 Aangezien er API's / websockets gemaakt moeten worden, heb ik besloten niet één, maar twéé back-end frameworks te kiezen. Dit met reden om te kijken welke back-end taal en framework mij het beste bevalt. Hiervoor heb ik een framework gekozen dat gebaseerd is op JavaScript en een framework gebaseerd op Java (Hoewel de naam anders doet vermoeden, zijn JavaScript en Java niet dezelfde taal). In semester 2 heb ik gewerkt met een C# back-end dus heb ik deze taal en bijbehorende frameworks buiten mijn keuze gelaten.
 
+Ik heb voor de volgende twee frameworks gekozen:
+1. ExpressJS als framework, NodeJS als programmeertaal en Sequelize als ORM.
+2. Spring Boot met Java als programmeertaal.
+
+Express is niet echt een JavaScript framework want de programmeertaal is NodeJS. NodeJS is een JavaSript-runtime-omgeving. Dit wordt veel gebruikt voor het maken van API's, dus ben ik benieuwd naar hoe het werkt. Ik ben al redelijk bekend met JavaScript, dus zou het onder de knie krijgen van Express mij gemakkelijk af moeten gaan. Voor de microservice API *Suppliers* wil ik gebruik maken van Express. 
+
+Springboot is op aanraden van de docent Leon van Bokhorst. Ik wil de microservice API *Products* maken in Spring Boot. Springboot zou met het genereren van het project een heel groot deel van het project in één keer kunnen opzetten.
 
 
 ---
