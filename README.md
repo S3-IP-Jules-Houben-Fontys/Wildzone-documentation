@@ -119,6 +119,16 @@ API staat voor **A**pplication **P**rogramming **I**nterface en zorgt ervoor dat
 
 Een API communiceert dus tussen twee services.
 
+### Wat is een websocket?
+
+Een websocket lijkt heel veel op een API. Het grote verschil is dat je een API iedere keer moet aanroepen als je deze wilt gebruiken. Bij een websocket is er een verbinding tussen twee services. Deze services kunnen elkaar berichten blijven sturen zonder dat er actief naar gevraagd moet worden. De verbinding tussen de twee services wordt gestart met een zogenaamde *handshake*, die aangeeft op welke locatie en poort ze met elkaar verbonden zijn. Deze handshake wordt pas verbroken zodra een van de twee services wegvalt.
+
+Omdat de connect open blijft staan zit er vrijwel geen vertraging tussen het sturen van de berichten tussen de twee services. Dit is bijvoorbeeld handig als je een chatfunctie wilt toevoegen aan je applicatie. De websocket krijgt automatisch bericht wanneer de data is veranderd. In tegenstelling tot een API, waar je bij iedere update een nieuw verzoek moet sturen. Je zou om de zoveel seconden zo'n request kunnen uitvoeren, maar dat is niet heel efficiënt. In zo'n geval komt een websocket goed van pas.
+
+### Wat is Postman?
+
+Postman wordt gebruikt om de API's te testen en te documenteren. Je kunt namelijk heel eenvoudig HTTP acties aanmaken met Postman om te kijken of de API daadwerkelijk de gewenste output geeft. Zodra al deze acties zijn aangemaakt, dan kun je hier heel eenvoudig automatisch documentatie voor laten maken door Postman. Dit is vergelijkbaar met een andere tool genaamd Swagger. 
+
 <h2 id="front-end-development">Front-end Development</h2>
 <h1>INVULLING VOLGT</H1>
 
