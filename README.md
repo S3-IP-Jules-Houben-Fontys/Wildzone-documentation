@@ -259,10 +259,25 @@ De laadsnelheid is goed voor onder andere SEO en gebruiksvriendelijkheid. Om dit
 
 Aangezien webshops veelal in een zeer competatieve markt zitten is het belangrijk om van de concurrenten te winnen. Het hoeft niet de mooiste website te zijn, zolang de performance (en in dit geval de laadsnelheid) maar goed is.
 
-
 ---
+
 <h2 id="back-end-development">Back-end Development</h2>
-<h1>INVULLING VOLGT</H1>
+
+Volgens [Laura Fitzgibbons](https://whatis.techtarget.com/definition/front-end#:~:text=The%20back%20end%20refers%20to,be%20accessed%20by%20a%20user.&text=The%20back%20end%20is%20also,navigated%20to%20by%20digital%20means.) is de defnitie van *software back-end* het volgende:
+
+> *De back-end verwijst naar delen van een computertoepassing of de code van een programma die het mogelijk maken om te werken en die niet toegankelijk zijn voor een gebruiker. De meeste gegevens en bedieningssyntaxis worden opgeslagen en geopend in de back-end van een computersysteem. Meestal bestaat de code uit één of meer programmeertalen. De back-end wordt ook wel de datatoegangslaag van software of hardware genoemd en bevat alle functionaliteit die met digitale middelen moet worden benaderd en waarnaar moet worden genavigeerd.*
+
+Of, simpel gezegd, code die uitgevoerd wordt door de computer zonder dat een gebruiker hierbij kan en dit direct kan aansturen. De back-end zit tussen de [front-end](#front-end-development) en de [database](#data-behoud) in. In de front-end wordt er data door de gebruiker opgevraagd, de back-end bekijkt dit verzoek en haalt de data op uit de database. De data van de database kan in de back-end worden bewerkt en omgezet als dit nodig is, om vervolgens teruggeven te worden aan de front-end zodat de gebruiker de opgevraagde gegevens ontvangt.
+
+### Wat is een back-end framework en wat kan je ermee?
+
+Frameworks zijn, zoals eerder genoemd in het hoofdstuk [Front-end Development](#front-end-development), kan een framework veel tijd besparen door je werk uit handen te nemen dat goed geautomatiseerd kan worden. Je hoeft dus niet meer de *boilerplate* code te schrijven. Dit is code die je voor ieder project opnieuw moet maken, maar vrijwel altijd *precies* hetzelfde is. De absolute basis om het zo te noemen om je project te starten.
+
+Back-end frameworks zijn goed te vergelijken met front-end frameworks. Het grote verschil met een front-end framework is dat het niet gaat om de communicatie met de gebruiker, maar communicatie met de database. Een back-end framework zal dus vooral het verbinden en het verkrijgen van data van en met een database eenvoudiger maken.
+
+Aangezien er API's / websockets gemaakt moeten worden, heb ik besloten niet één, maar twéé back-end frameworks te kiezen. Dit met reden om te kijken welke back-end taal en framework mij het beste bevalt. Hiervoor heb ik een framework gekozen dat gebaseerd is op JavaScript en een framework gebaseerd op Java (Hoewel de naam anders doet vermoeden, zijn JavaScript en Java niet dezelfde taal). In semester 2 heb ik gewerkt met een C# back-end dus heb ik deze taal en bijbehorende frameworks buiten mijn keuze gelaten.
+
+
 
 ---
 <h2 id="data-behoud">Data Behoud</h2>
