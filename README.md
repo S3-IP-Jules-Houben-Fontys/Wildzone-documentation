@@ -304,8 +304,18 @@ Springboot is op aanraden van de docent Leon van Bokhorst. Ik wil de microservic
 
 
 ---
+
 <h2 id="data-behoud">Data Behoud</h2>
-<h1>INVULLING VOLGT</H1>
+
+Data behoud is heel simpel gezegd het opslaan van de gegevens die aangemaakt worden door de gebruiker of het systeem, zodat later deze gegevens opgehaald, bijgewerkt of verwijderd kunnen worden. Zodra je de sessie met de computer verbreekt of de computers verbreken onderling de connnectie, dan blijft de data bestaan. De data wordt dus ergens fysiek 'permanent' opgeslagen. 
+
+Dit opslaan van gegevens kan op verschillende manieren. Enkele van deze manieren zijn:
+- In memory, dit verdwijnt echter na het vebreken van de sessie. Het voordeel van memory is dat het heel snel de data kan opslaan en ophalen.
+- Disk-based, de gegevens worden opgeslagen op een SSD of HDD op een server.
+
+Het Disk-based opslaan van gegevens wordt gedaan via databases. Deze databases zorgen ervoor dat de data opgeslagen wordt op zo'n manier dat deze data later nog op te halen valt, bewerkbaar is en verwijderd kan worden. Enkele bekende voorbeelden zijn:
+
+
 
 ---
 <h2 id="kwaliteits-garantie">Kwaliteits Garantie</h2>
