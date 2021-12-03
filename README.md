@@ -318,6 +318,15 @@ Het Disk-based opslaan van gegevens wordt gedaan via databases. Deze databases z
 
 ![image](https://user-images.githubusercontent.com/73841047/144589342-d05ccc59-e850-48fe-b13d-af4c3f447de7.png)
 
+Om het werken met een database eenvoudiger te maken, bestaan er zogenaamde *ORM's* (**O**bject-**R**elational **M**apping). Een ORM zorgt er namelijk voor dat je geen SQL meer hoeft te gebruiken; je maakt direct gebruik van een object in dezelfde programmeertaal die je aan het gebruiken bent.
+
+Een ORM forceert je om *DRY* (Don't repeat yourself) te werken, aangezien je data model goed in elkaar moet zetten om hier optimaal voordeel aan te hebben. Verder moet je gebruik maken van het *MVC* model (Model View Controller), wat er op zijn beurt ook weer voor zorgt dat de code er verzorgder en overzichtelijker eruit komt te zien. Tot slot is het gebruik van een ORM zo gemakkelijk als het aanroepen van een methode, net zoals bij 'normale' objecten bij het programmeren volgens [StackOverflow gebruiker e-satis en Jens](https://stackoverflow.com/questions/1279613/what-is-an-orm-how-does-it-work-and-how-should-i-use-one). 
+
+Omdat ik voor ExpressJS en Spring Boot heb gekozen als frameworks, moet ik hiervoor bijpassende ORM's zoeken (dit is alleen nodig in het geval dat een framework geen ingebouwde ORM heeft).
+
+Voor ExpressJS heb ik gekozen voor [Sequelize](https://sequelize.org/master/), omdat deze sprekend lijkt op het PHP framework Laravel. Deze hebben namelijk beide de handige functie *database migrations* en *data seeding*. Dit zorgt ervoor dat je een duidelijk overzicht hebt over hoe de tabellen in de database aangemaakt worden en heel eenvoudig en veilig geüpdate kunnen worden als de database in productie is. Verder is de functie database seeding heel fijn, want zo kun je heel eenvoudig dummy data gebruiken tijdens het testen van de applicatie.
+
+Spring Boot heeft een ingebouwde ORM, dus hiervoor hoef ik geen extra ORM te zoeken.
 
 ---
 <h2 id="kwaliteits-garantie">Kwaliteits Garantie</h2>
