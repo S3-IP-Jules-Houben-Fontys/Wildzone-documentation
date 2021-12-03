@@ -6,6 +6,7 @@
 <p align="center">
 <img src="https://user-images.githubusercontent.com/73841047/144439724-11d1bef7-fd99-49d1-a7b5-11846b5c1bdc.gif">
 </p>
+
 **Alle documentatie omtrent het Fontys Eindhoven Software Engineering semester 3 Wildzone webshop project van Jules Houben.**
 
 ---
@@ -313,8 +314,9 @@ Dit opslaan van gegevens kan op verschillende manieren. Enkele van deze manieren
 - In memory, dit verdwijnt echter na het vebreken van de sessie. Het voordeel van memory is dat het heel snel de data kan opslaan en ophalen.
 - Disk-based, de gegevens worden opgeslagen op een SSD of HDD op een server.
 
-Het Disk-based opslaan van gegevens wordt gedaan via databases. Deze databases zorgen ervoor dat de data opgeslagen wordt op zo'n manier dat deze data later nog op te halen valt, bewerkbaar is en verwijderd kan worden. Enkele bekende voorbeelden zijn:
+Het Disk-based opslaan van gegevens wordt gedaan via databases. Deze databases zorgen ervoor dat de data opgeslagen wordt op zo'n manier dat deze data later nog op te halen valt, bewerkbaar is en verwijderd kan worden. De meest populaire databases volgens de [Stackoverflow Developer Survey 2021](https://insights.stackoverflow.com/survey/2021#section-most-popular-technologies-databases) zijn:
 
+![image](https://user-images.githubusercontent.com/73841047/144589342-d05ccc59-e850-48fe-b13d-af4c3f447de7.png)
 
 
 ---
