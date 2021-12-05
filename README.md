@@ -71,6 +71,7 @@ Er zijn 4 belangrijke onderdelen in deze webshop, namelijk:
 Met dit conceptueel model kunnen we vervolgens een inschatting gaan maken hoe vaak een entiteit gebruikt zal gaan worden. Als een entiteit vaak gebruikt wordt, dan kan het verstandig zijn om deze entiteit zijn eigen service te geven. Stel de product entiteit wordt 100x gebruikt in 1 seconde en de leveranciers entiteit maar 1x per seconde. Het kan gebeuren dat de verzoeken 1-voor-1 worden afgewerkt. Wanneer er tijdens het opvragen van een leverancier iedere keer gewacht moet worden op de voorgaande 100 producten, dan kost dit veel tijd. Door veel vragende entiteiten hun eigen service te geven, dan kun je deze wachttijd onder andere verminderen. Zodra deze entiteiten hun eigen service hebben dan kan het bijvoorbeeld zo zijn dat de 100 producten op elkaar moeten wachten, maar dat ondertussen via de leveranciers service de leverancier alvast opgehaald kan worden.
 Verder zorgt het maken van microservices ervoor dat de entiteiten niet van elkaar afhankelijk zijn. Stel er gaat iets fout bij de service van de leverancier, dan werkt de service voor producten wel nog gewoon, waardoor de gebruikers de applicatie kunnen blijven gebruiken. Welliswaar zonder informatie over leveranciers, maar de applicatie ligt niet compleet uit de lucht.
 
+ [ :rocket: Terug naar de top](#top)
 
 <h2 id="project-overzicht"> 3. Project Overzicht </h2>
 
@@ -103,9 +104,11 @@ Als we iets verder inzoomen op het software systeem dat ontwikkeld moet worden, 
 
 ![Wildzone-C3 Component diagram drawio](https://user-images.githubusercontent.com/73841047/143583232-469492a1-5c13-49ce-8662-ad572f6668a3.png)
 
+ [ :rocket: Terug naar de top](#top)
+
 ---
 
-<h2 id="gedistribueerde-software">Gedistribueerde communicatie</h2>
+<h2 id="gedistribueerde-communicatie">4. Gedistribueerde communicatie</h2>
 
 In dit project wordt er gebruik gemaakt van microservices. Dit houdt in dat alle services los van elkaar kunnen draaien, zonder dat ze van elkaars bestaan afweten. Echter moeten de verschillende services wel met elkaar kunnen communiceren. Want hoe kunnen ze anders ervoor zorgen dat er in het magazijn de melding komt dat product *X* is gekocht door klant Peter?
 
@@ -135,9 +138,11 @@ Omdat de connect open blijft staan zit er vrijwel geen vertraging tussen het stu
 
 Postman wordt gebruikt om de API's te testen en te documenteren. Je kunt namelijk heel eenvoudig HTTP acties aanmaken met Postman om te kijken of de API daadwerkelijk de gewenste output geeft. Zodra al deze acties zijn aangemaakt, dan kun je hier heel eenvoudig automatisch documentatie voor laten maken door Postman. Dit is vergelijkbaar met een andere tool genaamd Swagger. 
 
+ [ :rocket: Terug naar de top](#top)
+
 ---
 
-<h2 id="front-end-development">Front-end Development</h2>
+<h2 id="front-end-development">5. Front-end Development</h2>
 
 ### JavaScript Frameworks
 
@@ -262,9 +267,11 @@ De laadsnelheid is goed voor onder andere SEO en gebruiksvriendelijkheid. Om dit
 
 Aangezien webshops veelal in een zeer competatieve markt zitten is het belangrijk om van de concurrenten te winnen. Het hoeft niet de mooiste website te zijn, zolang de performance (en in dit geval de laadsnelheid) maar goed is.
 
+ [ :rocket: Terug naar de top](#top)
+
 ---
 
-<h2 id="back-end-development">Back-end Development</h2>
+<h2 id="back-end-development">6. Back-end Development</h2>
 
 Volgens [Laura Fitzgibbons](https://whatis.techtarget.com/definition/front-end#:~:text=The%20back%20end%20refers%20to,be%20accessed%20by%20a%20user.&text=The%20back%20end%20is%20also,navigated%20to%20by%20digital%20means.) is de defnitie van *software back-end* het volgende:
 
@@ -305,10 +312,11 @@ Express is niet echt een JavaScript framework want de programmeertaal is NodeJS.
 
 Springboot is op aanraden van de docent Leon van Bokhorst. Ik wil de microservice API *Products* maken in Spring Boot. Springboot zou met het genereren van het project een heel groot deel van het project in één keer kunnen opzetten.
 
+ [ :rocket: Terug naar de top](#top)
 
 ---
 
-<h2 id="data-behoud">Data Behoud</h2>
+<h2 id="data-behoud">7. Data Behoud</h2>
 
 Data behoud is heel simpel gezegd het opslaan van de gegevens die aangemaakt worden door de gebruiker of het systeem, zodat later deze gegevens opgehaald, bijgewerkt of verwijderd kunnen worden. Zodra je de sessie met de computer verbreekt of de computers verbreken onderling de connnectie, dan blijft de data bestaan. De data wordt dus ergens fysiek 'permanent' opgeslagen. 
 
@@ -330,9 +338,11 @@ Voor ExpressJS heb ik gekozen voor [Sequelize](https://sequelize.org/master/), o
 
 Spring Boot heeft een ingebouwde ORM, dus hiervoor hoef ik geen extra ORM te zoeken.
 
+ [ :rocket: Terug naar de top](#top)
+
 ---
 
-<h2 id="kwaliteits-garantie">Kwaliteits Garantie</h2>
+<h2 id="kwaliteits-garantie">8. Kwaliteits Garantie</h2>
 
 Mijn definitie van hoge software kwaliteit is: Code die overzichtelijk is, nette naamgeving gebruikt, geen *work-arounds* gebruikt, volgens documentatie/intentie gemaakt is en niet vol zit met bugs.
 
@@ -365,9 +375,11 @@ We zijn steeds meer delen van ons leven aan het automatiseren, zodat we tijd ove
 
 De systemen communiceren onderling met elkaar via het [REST](#rest) protocol. Dit is een eenvoudig te maken protocol, het kan namelijk met vrijwel elke programmeertaal en je hebt programma's zoals [Postman](#postman). Zodra iemand weet wat de URL van een API is, dan zou deze daarop HTTP acties uit kunnen voeren als de API niet beveiligd is met autenticatie. Deze persoon zou dus nieuwe data aan de database kunnen toevoegen, bekijken, bewerken en verwijderen zonder dat dit de bedoeling is. Om dit te voorkomen moet de API bijvoorbeeld beveiligd worden met een Bearer token. Dit is een (persoonlijke) token die ervoor zorgt dat de HTTP acties worden toegestaan. Als er een HTTP actie wordt uitgevoerd zonder deze Bearer token, dan zal het systeem weigeren de actie uit te voeren.
 
+ [ :rocket: Terug naar de top](#top)
+
 ---
 
-<h2 id="github">Software Release Managament & het gebruik van Github</h2>
+<h2 id="github">9. Software Release Managament & het gebruik van Github</h2>
 
 Om ervoor te zorgen dat er geen werk verloren gaat, zal Github gebruikt worden om alle projecten op te slaan, bugs te melden, automatisch te laten testen en bij geslaagde tests het project te Dockerizen en plaatsen op Docker hub. Software Release Management moet het saaie en repetitieve gedeelte van software development weghalen/verminderen. Zo kan het installeren van omgevingen en testen geautomatiseerd worden. Dit scheelt een hoop tijd; tijd die beter gestoken kan worden in het schrijven van code.
 
@@ -479,3 +491,4 @@ Vaak wordt er dan een sample.env meegestuurd. Hierin staan wel welke variabelen 
 
 Het voordeel van de configuratie opslaan in de repository is dat je kunt bijhouden wanneer er wat is aangepast door wie. Verder heb je alle code dan op één plek staan. 
 
+ [ :rocket: Terug naar de top](#top)
