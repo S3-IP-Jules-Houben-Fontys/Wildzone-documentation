@@ -113,7 +113,7 @@ Een andere manier is XML. XML (Extensible Markup Language) was vroeger een veel 
 
 Voor dit project wordt JSON gebruikt omdat hier meer voordelen aan zitten als aan XML. Daarbij is JSON een EMCA standaard.
 
-### Wat is REST?
+<h3 id="rest">Wat is REST?</h3>
 
 REST staat voor **RE**presentational **S**tate **T**ransfer en is een architecturele stijl voor een [API](#api). REST is een nette en eenvoudige naam om te zeggen dat de applicatie de standaard HTTP acties accepteert. Denk hierbij aan Creat, Read, Update, Delete etc. Door middel van de URL kunnen de verschillende acties uitgevoerd worden.
 
@@ -129,7 +129,7 @@ Een websocket lijkt heel veel op een API. Het grote verschil is dat je een API i
 
 Omdat de connect open blijft staan zit er vrijwel geen vertraging tussen het sturen van de berichten tussen de twee services. Dit is bijvoorbeeld handig als je een chatfunctie wilt toevoegen aan je applicatie. De websocket krijgt automatisch bericht wanneer de data is veranderd. In tegenstelling tot een API, waar je bij iedere update een nieuw verzoek moet sturen. Je zou om de zoveel seconden zo'n request kunnen uitvoeren, maar dat is niet heel efficiënt. In zo'n geval komt een websocket goed van pas.
 
-### Wat is Postman?
+<h3 id="postman">Wat is Postman?</h3>
 
 Postman wordt gebruikt om de API's te testen en te documenteren. Je kunt namelijk heel eenvoudig HTTP acties aanmaken met Postman om te kijken of de API daadwerkelijk de gewenste output geeft. Zodra al deze acties zijn aangemaakt, dan kun je hier heel eenvoudig automatisch documentatie voor laten maken door Postman. Dit is vergelijkbaar met een andere tool genaamd Swagger. 
 
@@ -329,8 +329,39 @@ Voor ExpressJS heb ik gekozen voor [Sequelize](https://sequelize.org/master/), o
 Spring Boot heeft een ingebouwde ORM, dus hiervoor hoef ik geen extra ORM te zoeken.
 
 ---
+
 <h2 id="kwaliteits-garantie">Kwaliteits Garantie</h2>
-<h1>INVULLING VOLGT</H1>
+
+Mijn definitie van hoge software kwaliteit is: Code die overzichtelijk is, nette naamgeving gebruikt, geen *work-arounds* gebruikt, volgens documentatie/intentie gemaakt is en niet vol zit met bugs.
+
+Software kwaliteit kan echter veel meer omvatten. Denk bijvoorbeeld ook aan snelheid, het gebruik van resources en veiligheid. Veel eigenschappen van software kun je tetsen. De front-end zou je bijvoorbeeld kunnen testen door middel van Google Lighthouse. Dit is een handige tool gemaakt door Google die meet hoe de website presteert, laat zien wat er beter kan en hoe de website het doet ten opzichte van andere websites.
+
+Endpoint testing kan bijvoorbeeld bugs in code ontdekken, wanneer het gewenste resultaat niet terug komt tijdens het testen. SonarCloud kan checken of alle code is geschreven volgens de opgestelde eisen, denk hierbij aan eenzelfde inspringing in alle code, of dat er in comments geen daadwerkelijke code mag staan. Dit zorgt ervoor dat elke programmeur de code in dezelfde stijl schrijft. Dit zorgt er op zijn beurt weer voor dat de code netjes en overzichtelijk blijft.
+
+### Code Coverage
+
+Code coverage, ookwel test coverage genoemd, is een maatstaf om te controleren hoeveel code in het programma getest wordt. Hoe hoger deze score, des te meer code getest wordt. In het ideale scenario wil je dat de code coverage voor een applicatie 100% is, want dan wordt namelijk alle code getest. Echter is dit vaak niet het geval. Testen kost tijd en tijd is geld. Niet essentiële code of eenvoudige code wordt dan snel niet getest, met het idee dat het een hoop tijd en geld bespaart. 
+
+### Testen van Code
+
+Niet alle code moet op één manier getest worden. Als je namelijk alleen unittesten gaat uitvoeren, dan weet je niet of de applicatie snel is, niet te veel rescoures gebruikt en veilig is. Een applicatie is er dus bij gebaat dat er meerdere testen aanwezig zijn, maar het belangrijkste is dat de testen moeten passen bij de applicatie. Stel een website heeft alleen maar statische informatie (informatie die niet uit een database komt in dit geval) en geen input van gebruikers, dan heeft het vrij weinig zin om hier veiligheidstesten op uit te voeren. Deze applicatie zou er dan meer aan hebben om te kijken of de website wel snelgenoeg geladen wordt.
+
+### Geautomatiseerd testen of niet?
+
+We zijn steeds meer delen van ons leven aan het automatiseren, zodat we tijd overhouden voor ander (leuker) werk. Ditzelfde geldt ook voor het testen van software. Dit heeft voordelen en nadelen. De
+
+**Voordelen:**
+- Je kunt na het pushen van je code direct zien of je code werkt (De meeste tests worden snel doorlopen).
+- Je kunt (bijna) de hele code iedere keer opnieuw testen, zodat je zeker weet dat er geen code stuk is gegaan.
+- Een computer maakt geen fouten bij het testen van de code.
+
+**Nadelen:**
+- Als de test niet goed is gemaakt / ingevuld, dan kan deze een zogenaamde *false-positive* terug geven; De code werkt niet, maar de manier waarop de test is geschreven slaagt wel. 
+- Een automatische test is misschien niet helemaal representatief voor de echte use-case van de software.
+
+### Beveiligings zwaktepunten van gedistribueerde systemen
+
+De systemen communiceren onderling met elkaar via het [REST](#rest) protocol. Dit is een eenvoudig te maken protocol, het kan namelijk met vrijwel elke programmeertaal en je hebt programma's zoals [Postman](#postman). Zodra iemand weet wat de URL van een API is, dan zou deze daarop HTTP acties uit kunnen voeren als de API niet beveiligd is met autenticatie. Deze persoon zou dus nieuwe data aan de database kunnen toevoegen, bekijken, bewerken en verwijderen zonder dat dit de bedoeling is. Om dit te voorkomen moet de API bijvoorbeeld beveiligd worden met een Bearer token. Dit is een (persoonlijke) token die ervoor zorgt dat de HTTP acties worden toegestaan. Als er een HTTP actie wordt uitgevoerd zonder deze Bearer token, dan zal het systeem weigeren de actie uit te voeren.
 
 ---
 
