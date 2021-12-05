@@ -492,3 +492,7 @@ Vaak wordt er dan een sample.env meegestuurd. Hierin staan wel welke variabelen 
 Het voordeel van de configuratie opslaan in de repository is dat je kunt bijhouden wanneer er wat is aangepast door wie. Verder heb je alle code dan op één plek staan. 
 
  [ :rocket: Terug naar de top](#top)
+ 
+ <p align="center">
+  <img src="https://user-images.githubusercontent.com/73841047/144752608-11e6d7f6-99ff-4f3b-b103-f041d6b00081.gif">
+</p>
