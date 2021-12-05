@@ -56,6 +56,8 @@ Het is belangrijk om de verschillende onderdelen echt volledig los van elkaar te
 
  [ :rocket: Terug naar de top](#top)
 
+---
+
 <h2 id="conceptueel-model"> 2. Conceptueel Model </h2>
 
 <p align="center">
@@ -72,6 +74,8 @@ Met dit conceptueel model kunnen we vervolgens een inschatting gaan maken hoe va
 Verder zorgt het maken van microservices ervoor dat de entiteiten niet van elkaar afhankelijk zijn. Stel er gaat iets fout bij de service van de leverancier, dan werkt de service voor producten wel nog gewoon, waardoor de gebruikers de applicatie kunnen blijven gebruiken. Welliswaar zonder informatie over leveranciers, maar de applicatie ligt niet compleet uit de lucht.
 
  [ :rocket: Terug naar de top](#top)
+
+---
 
 <h2 id="project-overzicht"> 3. Project Overzicht </h2>
 
