@@ -54,7 +54,7 @@ In het geval van gedistribueerde applicaties zijn de verschillende servers onafh
 
 Het is belangrijk om de verschillende onderdelen echt volledig los van elkaar te kunnen laten draaien. In alle gevallen hoeven de servers dus niet van elkaar te weten dat ze bestaan. Het enige wat ze moeten kunnen, is het ontvangen en het versturen van data in een vooraf gedefinieerde structuur.
 
-:rocket: [Terug naar de top](#top)
+ [ :rocket: Terug naar de top](#top)
 
 <h2 id="conceptueel-model"> 2. Conceptueel Model </h2>
 
