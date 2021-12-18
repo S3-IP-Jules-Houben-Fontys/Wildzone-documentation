@@ -55,6 +55,50 @@ Om de hoofdvraag te kunnen beantwoorden, deel ik deze op in deelvragen:
 
 <h2 align="center" id="1-authenticatie">1. Welke authenticatie service kan ik het beste gebruiken voor een webshop & adminpanel?</h2>
 
+[Openbase (2021)](https://openbase.com/categories/js/best-react-authentication-libraries) heeft de volgende lijst aanbevolen:
+
+1. **Auth0 (Auth0)** <br>
+    Heeft een gebruikers score van 5.0 / 5. Heeft 460 Github sterren en 317 duizend wekelijkse downloads. Auth0 is voor het laatst 2 maanden geleden geüpdate.
+
+2. **MSAL-React (Azure)** <br>
+    Is gemaakt door Microsoft, heeft 2 duizend Github sterren en 67 duizend wekelijkse downloads. MSAL-React is voor het laatst 18 dagen geleden geüpdate.
+
+3. **Auth-js (Asgardeo)** <br>
+    Heeft 20 Github sterren, 766 wekelijkse downloads en is voor het laatst 19 dagen geleden geüpdate.
+
+4. **Schematics (Oktadev)**<br>
+    Heeft 55 Github sterren, 2 duizend wekelijkse downloads en is voor het laatst 9 dagen geleden geüpdate.
+
+5. **Supertokens-auth-react** <br>
+    Heet 55 github sterren, 305 wekelijkse downloads en is voor het laatst 1 maand geleden geüpdate.
+
+6. **Redux-auth-wrapper** <br>
+    Heeft 2 duizend Github sterren, 24 duizend wekelijkse downloads en is voor het laatst 9 maand geleden geüpdate.
+
+Voor authenticatie vind ik het belangrijk om een up-to-date systeem te gebruiken. Mijn redenatie hiervoor is dat er constant 'hacks' bedacht worden. De authenticatie moet deze hacks zo veel mogelijk voor blijven en/of updates releasen zodat die zwaktepunten kunnen worden gedicht. Als zo'n authenticatie service dus maanden geen update meer heeft gekregen, dan kun je je afvragen of het systeem wel nog zo veilig is. 
+
+Verder vind ik het belangrijk dat de authenticatie service vaak gebruikt wordt door andere gebruikers. Als een systeem vaak gebruikt wordt, dan kun je ervanuit gaan dat deze ook door bedrijven en professionals gebruikt worden. De kans dat een project met meer dan 2 duizend wekelijkse downloads nog steeds een hobby project is, lijkt mij vrij klein. 
+
+De nummer 1, Auth0, lijkt hierdoor de beste kandidaat met relatief veel meer wekelijkse downloads dan de andere authenticatie services. Ook is Auth0 redelelijk recent geüpdate, namelijk 2 maanden geleden. Vergeleken met Redux-auth-wrapper die 24 duizend keer per week gedownload wordt, maar 9 maanden geleden voor het laatst geüpdate is geworden vallen die 2 maanden reuze mee.
+
+### (Social) Login proces
+
+Volgens [Auth0 (Social Login, 2021)](https://auth0.com/learn/social-login/) geeft 86 procent van de gebruikers aan last te hebben van het moeten maken van nieuwe accounts op websites. Auth0 vervolgt: Sommige van deze gebruikers verlaten de site liever dan zich te registreren, wat betekent dat het verstrekken van sociale login aan de apps het aantal registraties op de site zal verhogen. Het is dus belangrijk om voorkeur te geven om de mogelijkheid aan te bieden om in te loggen met social media. De authenticatie software moet dus de mogelijkheid hebben om sociale login toe te voegen.
+
+Maar welk social media account wordt het vaakst gebruikt om in te loggen op een website? Het antwoord op die vraag is volgens [Pacilio (2019)](https://www.indiehackers.com/post/social-login-do-users-prefer-google-twitter-or-facebook-here-is-what-we-ve-learned-on-cruip-com-9e98cc9bbc) met 70.99% van 33.999 gevraagde gebruikers de inlog met het Google account.
+
+Auth0 is een library die je aan je project kunt toevoegen. Auth0 zorgt ervoor dat je zelf geen authenticatie meer hoeft op te zetten. Dit heeft meerdere voordelen:
+- Je hoeft je geen zorgen te maken over de veiligheid. Auth0 slaat de gebruikersgegevens op, op hun eigen beveiligde servers. Wachtwoorden worden niet opgeslagen als plain tekst, maar gehashed met bcrypt en er wordt een salt toegevoegd. [(Auth0, 2021)](https://auth0.com/pricing)
+- Auth0 kan in 15 minuten geintegreerd worden in een React.js app. [(Arias, 2021)](https://auth0.com/docs/quickstart/spa/react)
+- Ondersteunt het inloggen met social media accounts en tweestaps verificatie.
+- Kan ook Express.js en Spring Boot API's beveiligen. [(Patrick, 2021)](https://auth0.com/docs/quickstart/backend/nodejs) / [(Anderson, 2021)](https://auth0.com/docs/quickstart/backend/java-spring-security5)
+
+
+
+<div align="center">
+    <img src="https://user-images.githubusercontent.com/73841047/146638086-8c824038-d101-45d5-a854-b04e2a916fac.png">
+</div>
+
 <hr>
 
 <h2 align="center" id="2-testen">2. Hoe kan ik testen of mijn website veilig is?</h2>
