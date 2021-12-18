@@ -25,11 +25,11 @@ Als de oplossing zo simpel is, had de oplossing dan niet voordat de software in 
 
 <h2 align="center">Inhoudsopgave</h2>
 
-<a href="#onderzoeksvraag">Onderzoeksvraag</a>
+<a href="#onderzoeksvraag">Onderzoeksvraag</a><br>
 <a href="#1-authenticatie">1. Welke authenticatie service kan ik het beste gebruiken voor een webshop & adminpanel?</a><br>
-<a href="#2-testen">2. Hoe kan ik testen of mijn website veilig is?</a><br>
-<a href="3-communicatie">3. Hoe zorg ik ervoor dat de onderlinge communicatie tussen microservices veilig is?</a><br>
-<a href="4-risico">4. Welke beveiligingsrisico's komen er vaak voor bij web applicaties?</a><br>
+<a href="#2-communicatie">2. Hoe zorg ik ervoor dat de onderlinge communicatie tussen microservices veilig is?</a><br>
+<a href="#3-risico">3. Welke beveiligingsrisico's komen er vaak voor bij web applicaties?</a><br>
+<a href="#4-testen">4. Hoe kan ik testen of mijn website veilig is?</a><br>
 <a href="#bron">Bronnenlijst</a>
 
 <hr>
@@ -85,7 +85,11 @@ De nummer 1, Auth0, lijkt hierdoor de beste kandidaat met relatief veel meer wek
 
 Volgens [Auth0 (Social Login, 2021)](https://auth0.com/learn/social-login/) geeft 86 procent van de gebruikers aan last te hebben van het moeten maken van nieuwe accounts op websites. Auth0 vervolgt: Sommige van deze gebruikers verlaten de site liever dan zich te registreren, wat betekent dat het verstrekken van sociale login aan de apps het aantal registraties op de site zal verhogen. Het is dus belangrijk om voorkeur te geven om de mogelijkheid aan te bieden om in te loggen met social media. De authenticatie software moet dus de mogelijkheid hebben om sociale login toe te voegen.
 
-Maar welk social media account wordt het vaakst gebruikt om in te loggen op een website? Het antwoord op die vraag is volgens [Pacilio (2019)](https://www.indiehackers.com/post/social-login-do-users-prefer-google-twitter-or-facebook-here-is-what-we-ve-learned-on-cruip-com-9e98cc9bbc) met 70.99% van 33.999 gevraagde gebruikers de inlog met het Google account.
+Maar welk social media account wordt het vaakst gebruikt om in te loggen op een website? Het antwoord op die vraag is volgens [Pacilio (2019)](https://www.indiehackers.com/post/social-login-do-users-prefer-google-twitter-or-facebook-here-is-what-we-ve-learned-on-cruip-com-9e98cc9bbc) met 70.99% van 33.999 gevraagde gebruikers de inlog met het Google account. Zie onderstaande afbeelding voor meer informatie:
+
+<div align="center">
+    <img src="https://user-images.githubusercontent.com/73841047/146638086-8c824038-d101-45d5-a854-b04e2a916fac.png">
+</div>
 
 Auth0 is een library die je aan je project kunt toevoegen. Auth0 zorgt ervoor dat je zelf geen authenticatie meer hoeft op te zetten. Dit heeft meerdere voordelen:
 - Je hoeft je geen zorgen te maken over de veiligheid. Auth0 slaat de gebruikersgegevens op, op hun eigen beveiligde servers. Wachtwoorden worden niet opgeslagen als plain tekst, maar gehashed met bcrypt en er wordt een salt toegevoegd. [(Auth0, 2021)](https://auth0.com/pricing)
@@ -93,24 +97,29 @@ Auth0 is een library die je aan je project kunt toevoegen. Auth0 zorgt ervoor da
 - Ondersteunt het inloggen met social media accounts en tweestaps verificatie.
 - Kan ook Express.js en Spring Boot API's beveiligen. [(Patrick, 2021)](https://auth0.com/docs/quickstart/backend/nodejs) / [(Anderson, 2021)](https://auth0.com/docs/quickstart/backend/java-spring-security5)
 
-
-
-<div align="center">
-    <img src="https://user-images.githubusercontent.com/73841047/146638086-8c824038-d101-45d5-a854-b04e2a916fac.png">
-</div>
+Auth0 is in mijn ogen de beste keuze voor dit project om te gebruiken als authenticatie service.
 
 <hr>
 
-<h2 align="center" id="2-testen">2. Hoe kan ik testen of mijn website veilig is?</h2>
+<h2 align="center" id="2-communicatie">2. Hoe zorg ik ervoor dat de onderlinge communicatie tussen microservices veilig is?</h2>
+
+Zoals in hoofdstuk 1 al kort aangehaald: Auth0 kan ook Express.js en Spring Boot API's beveiligen. API's zijn normaal gesproken voor iedereen toegangkelijk. Dit wil zeggen dat wanneer je weet op welke URL je een HTTP(S) request kan doen met de juiste prameters, dan kun je informatie ontvangen en versturen. Ook wanneer dit oorsponkelijk niet het idee was, bijvoorbeeld wanneer de microservices alleen onderling zouden moeten communiceren. Om ervoor te zorgen dat er niets van buitenaf de API's kan laten werken, moeten deze API's beveiligd worden. Een oplossing hiervoor is het beveiligen van de endpoints. API-endpoints zijn de specifieke digitale locaties waar verzoeken om informatie door één of meerdere programma's worden verzonden om de daar aanwezige digitale bron op te halen [(TechTarget, 2021)](https://searchapparchitecture.techtarget.com/definition/API-endpoint).
+
+Zo'n endpoint kan dus worden afgeschermd door middel van een vereiste token. Als de gebruiker of de andere service geen of niet de juiste token heeft, dan weigert de API dit verzoek uit te voeren.
+
+Volgens de website [REST API Tutorial](https://restfulapi.net/security-essentials/) is het verstandig om altijd HTTPS te gebruiken. De data wordt dan versleuteld en verstuurd. Bij de ontvanger wordt deze data weer ontsleuteld. Mocht iemand deze data daar tussenin zien te onderscheppen, dan is deze data niet bruikbaar omdat het versleuteld is en niet zomaar ontsleuteld kan worden. Voor dit project is het echter te tijdrovend om te gebruiken, aangezien er alleen gebruik gemaakt wordt van localhost. Als dit project daadwerkelijk gepubliceerd zou worden, dan moet er 100% zeker naar een SSL certificaat gekeken worden om HTTPS te kunnen gebruiken.
+
+Verder in het artikel zegt de website [REST API Tutorial](https://restfulapi.net/security-essentials/) dat je nooit gevoelige informatie in een URL moet zetten. URL's kunnen heel eenvoudig gelogd worden door middel van bijvoorbeeld een tool zoals wireshark. Met deze tool zou je alle HTTP en HTTPS URLs kunnen zien. Als er dus gevoelige informatie staat in de URL, dan zou iemand anders dit dus kunnen onderscheppen en lezen.
 
 <hr>
 
-<h2 align="center" id="3-communicatie">3. Hoe zorg ik ervoor dat de onderlinge communicatie tussen microservices veilig is?</h2>
+<h2 align="center" id="3-risico">3. Welke beveiligingsrisico's komen er vaak voor bij web applicaties?</h2>
+
 
 <hr>
 
-<h2 align="center" id="4-risico">4. Welke beveiligingsrisico's komen er vaak voor bij web applicaties?</h2>
 
+<h2 align="center" id="4-testen">4. Hoe kan ik testen of mijn website veilig is?</h2>
 <hr>
 
 <h2 align="center" id="conclusie">Conclusie</h2>
