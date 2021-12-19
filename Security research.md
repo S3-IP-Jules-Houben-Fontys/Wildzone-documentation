@@ -143,7 +143,14 @@ Verder in het artikel zegt de website [REST API Tutorial](https://restfulapi.net
     Komt veel overeen met _1. Broken Access Control_, maar nu gaat vooral om permissies en accounts. Zo is een standaard account zoals `user: admin` en `password: admin` een veel gebruikt development account, maar dus ook een zwaktepunt die gevonden en gebruikt kan worden door een aanvaller. 'Brute forcing' is een techniek die gebruikt kan worden om zo veel mogelijk gebruikersnamen en wachtwoorden in te vullen in de hoop dat minstens één combinatie toegang geeft tot het systeem. Het bijhouden van inlogpogingen en het beperken van inloggen bij verdachte pogingen helpt bij dit probleem. Een twee-factor identificatie kan ervoor zorgen dat wanneer een aanvaller op een of andere manier toch aan de inloggevens is gekomen van een gebruiker, nog niet kan inloggen omdat hij/zij deze unieke code niet heeft. 
 
 8. [**Software and Data Integrity Failures**](https://owasp.org/Top10/A08_2021-Software_and_Data_Integrity_Failures/)
-    Wanneer de applicatie klaar is om (automatisch) gecheckt te worden dan zou een aanvaller via een geïnstalleerde library of onveilige CI/CD pipeline code bewerken of inzien. Dit kan voorkomen worden door een ervaren developer te laten kijken naar de te publiceren code 
+    Wanneer de applicatie klaar is om (automatisch) gecheckt te worden dan zou een aanvaller via een geïnstalleerde library of onveilige CI/CD pipeline code bewerken of inzien. Dit kan voorkomen worden door een ervaren developer te laten kijken naar de te publiceren code. Uiteraard moeten environment variabelen niet zichtbaar zijn in de CI/CD pipelines, want dan zou de aanvaller deze eenvoudig kunnen overnemen en gebruiken.
+
+9. [**Security Logging and Monitoring Failures**](https://owasp.org/Top10/A09_2021-Security_Logging_and_Monitoring_Failures/)
+    Het missen van het opslaan van alle gebeurtenissen. Wanneer er (verdachte) gebeurtenissen plaatsvinden op de website, dan is het verstandig om deze op te slaan en regelmatig (automatisch) te laten controleren. Als er veel verdachte pogingen zijn dan is er een kans dat het systeem onder vuur ligt en er binnenkort misschien een zwakke plek gevonden wordt. Het is verstandig om de plekken van verdachte input te controleren en eventueel het account / ip-adres / apparaat te verbannen van de applicatie.
+
+10. [**Server Side Request Forgery**](https://owasp.org/Top10/A10_2021-Server-Side_Request_Forgery_%28SSRF%29/)
+    Een aanvaller kan inzicht krijgen in de infrastructuur van de server en de applicatie. Hierdoor kunnen 'verborgen' URL's gevonden worden die niet geschikt zijn voor het publiek. Ook services met open poorten kunnen bekeken en aangepast worden.
+
 <hr>
 
 
