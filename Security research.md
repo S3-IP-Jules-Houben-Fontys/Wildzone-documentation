@@ -7,6 +7,16 @@
     <img src="https://user-images.githubusercontent.com/73841047/146545085-097ff3b8-14cc-4bdc-a700-ed3adbd04616.png">
 </div>
 
+<div align="center">
+
+| Gemaakt door:           | Docent en school:     |
+|-------------------------|-----------------------|
+| Jules Houben \| i461249 | Leon van Bokhorst     |
+| 21 December 2021        | Fontys Hogeschool ICT |
+| Versie 1                | Software Engineering  |
+
+</div>
+
 <hr>
 
 <h2 align="center">Inleiding</h2>
@@ -20,6 +30,8 @@ Als de oplossing zo simpel is, had de oplossing dan niet voordat de software in 
 <hr>
 
 <h2 align="center">Leeswijzer</h2>
+
+In hoofdstuk 1 zoek ik uit welke authenticatie service ik het het beste kan gebruiken in dit project. Bij hoofdstuk 2 vertel ik hoe de communicatie tussen microservices veilig gedaan kan worden. In hoofdstuk 3 bespreek ik de top 10 beveiligingsrisico's volgens OWASP. In hoofdstuk 4 zoek ik uit hoe je de veiligheid kunt testen en of je dit kunt laten automatiseren. En tot slot de conclusie, waar ik antwoord geef op de hoofdvraag.
 
 <hr>
 
@@ -153,12 +165,54 @@ Verder in het artikel zegt de website [REST API Tutorial](https://restfulapi.net
 
 <hr>
 
-
 <h2 align="center" id="4-testen">4. Hoe kan ik testen of mijn website veilig is?</h2>
+
+Veel beveiligings zwaktepunten genoemd in [hoofdstuk 3](#3-risico) kunnen verholpen worden tijdens het ontwerpen van de applicatie. 1 Tot en met 4, 7 en 10 kunnen namelijk, als het goed ontworpen wordt, verholpen worden tijdens het ontwerpproces. Door goed te bedenken wat de gebruiker fout zou kunnen doen of hoe het systeem misbruikt kan worden kun je al veel problemen oplossen. Zo kan je bijvoorbeeld ervoor zorgen dat persoonlijke gegevens nauwelijks voor een gebruiker beschikbaar zijn en al zeker niet in één keer te downloaden zijn. Ook het beveiligen, ofwel onschadelijk maken inputvelden kan de kans op aanvallen verkleinen. Een deel van de top 10 kan getest worden met zogenaamde pen-testen. Met deze testen probeer je een exploit te vinden in het systeem, meestal via een gebruikersinput. Een exploit is een zwaktepunt in het systeem waar je ongewenst gedrag kunt veroorzaken [Coresecurity](https://www.coresecurity.com/penetration-testing). 
+
+Veel van deze pen-testen kun je laten automatiseren, echter heb ik zelf geen gratis of zelfs goedkope service gevonden om dit te automatiseren. [Pentest Tools]() lijkt de meest uitgebreide service te hebben, [van SQL injecties tot het testen van alle OWASP beveiligings risico's](https://pentest-tools.com/features/pentest-robots#:~:text=All%20other%20vulns%20from%20OWASP%20Top%2010%20and%20more!). Deze service begint vanaf €93,- per maand. Een alternatief, maar absoluut niet goedkoper met een startprijs vanaf €176,42, is [ImmuniWeb](https://www.immuniweb.com/). Beide bieden ze een 'gratis' test aan, deze test is zeer beperkt en zal waarschijnlijk geen schokkende beveiligings risico's vinden.
+
+Een ander opvallend thema in de OWASP top 10, zijn de dummy en adminaccounts die meegegaan zijn in productie. Het is dus verstandig om geen data of accoutns mee te nemen van development naar productie en wanneer dit wel nodig is, deze accounts goed te beveiligen met sterke wachtwoorden en tweestapsverificatie. Dit kun je niet echt testen, maar je kan het wel controleren.
+
+Het is voordat de applicatie van development naar productie gaat verstandig om de OWASP top 10 erbij te pakken en na te lopen. Dit kan ervoor zorgen dat je een deel van de veiligheidsrisicio's kunt vinden en wellicht direct kunt verhelpen.
+
 <hr>
 
 <h2 align="center" id="conclusie">Conclusie</h2>
 
+De hoofdvraag was:
+
+**Hoe zorg ik ervoor dat mijn webshop, die gebruik maakt van microservices, zo veilig mogelijk is?**
+
+Het antwoord hierop is: <Br>
+Alles betreft authenticatie moet je niet zelf gaan verzinnen, dit hebben andere (slimmere) mensen al volledig bedacht, uitgewerkt en ontwikkeld. Auth0 is, tot zekere hoogte, gratis te gebruiken. Dus voor de webshop van dit project, volstaat Auth0 zeker.
+
+De microservices moeten gebruik maken van HTTPS, dit voorkomt dat verzoeken uitgelezen kunnen worden. Daarbij moeten de services ook een authenticatie stuk erin hebben, zodat niet iedereen zomaar verzoeken naar de API's kan sturen.
+
+De OWASP top 10 kan gebruikt worden om veel voorkomende risico's te herkennen en hoe ze eventueel opgelost zouden kunnen worden. Om te testen of alles veilig is, kunnen pen-testen geschreven worden. Tegenwoordig kunnen deze pen-testen geautomatiseerd worden, maar dan moet je wel de portemonnee trekken.
+
 <hr>
 
 <h2 align="center" id="bron">Bronnenlijst</h2>
+
+10 Best React Authentication Libraries. (2021, December 18). Retrieved from Openbase: https://openbase.com/categories/js/best-react-authentication-libraries 
+
+Anderson, j. (2021). Spring Boot API: Authorization. Retrieved from Auth0 docs: https://auth0.com/docs/quickstart/backend/java-spring-security5
+
+Arias, D. (2021). React: Login. Retrieved from Auth0 docs: https://auth0.com/docs/quickstart/spa/react
+
+Auth0. (2021). Flexible pricing for companies and developers. Retrieved from Auth0: https://auth0.com/pricing
+
+Auth0. (2021). Social Login - Time to implement it in your apps. Retrieved from Auth0: https://auth0.com/learn/social-login/
+
+Coresecurity. (2021). Penetration Testing. Retrieved from Coresecurity: https://www.coresecurity.com/penetration-testing
+
+NOS Nieuws. (2021, December 6). Claim in de maak na datalek coronatesten: 'Er is een onaanvaardbaar risico genomen'. NOS.
+
+Pacilio, D. (2019, November 6). Social login — Do users prefer Google, Twitter, or Facebook? Here is what we’ve learned on Cruip.com. Retrieved from Indie Hackers: https://www.indiehackers.com/post/social-login-do-users-prefer-google-twitter-or-facebook-here-is-what-we-ve-learned-on-cruip-com-9e98cc9bbc
+
+Patrick, D. (2021). Node (Express) API: Authorization. Retrieved from Auth0 Docs: https://auth0.com/docs/quickstart/backend/nodejs
+
+REST API Security Essentials. (2021, Oktober 1). Retrieved from REST API Tutorial: https://restfulapi.net/security-essentials/
+
+TechTarget. (2021, Oktober). API endpoint. Retrieved from TechTarget: https://searchapparchitecture.techtarget.com/definition/API-endpoint
+
