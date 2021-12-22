@@ -21,9 +21,9 @@ Deze organisatie is opgedeeld in verschillende repositories. In elke repository 
 ---
 
 ## Content van de documentatie repository
-- [UX-onderzoek](https://github.com/S3-IP-Jules-Houben-Fontys/Wildzone-documentation/blob/main/UX-research)
-- [Beveiliging onderzoek](https://github.com/S3-IP-Jules-Houben-Fontys/Wildzone-documentation/blob/main/Security%20research)
-- [Fiverr onderzoek](https://github.com/S3-IP-Jules-Houben-Fontys/Wildzone-documentation/blob/main/Fiverr-research)
+- [UX-onderzoek](https://github.com/S3-IP-Jules-Houben-Fontys/Wildzone-documentation/blob/main/UX-research.md) (nog niet klaar)
+- [Beveiliging onderzoek](https://github.com/S3-IP-Jules-Houben-Fontys/Wildzone-documentation/blob/main/Security%20research.md)
+- [Fiverr onderzoek](https://github.com/S3-IP-Jules-Houben-Fontys/Wildzone-documentation/blob/main/Fiverr-research.md) (nog niet klaar)
 ---
 
 <h2 id="top">Inhoudsopgave ReadMe Wildzone-documentation</h2>
