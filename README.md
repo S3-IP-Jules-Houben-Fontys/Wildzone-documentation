@@ -91,6 +91,8 @@ Om duidelijkheid te creeren in dit project, wordt er gebruik gemaakt van de zoge
 
 Zie onderstaande diagram voor de context van dit software systeem.
 
+
+
 ![Wildzone-C1 System Context diagram drawio (2)](https://user-images.githubusercontent.com/73841047/143442490-e2176763-8095-4cc2-8e0b-d8d9d8ba5ce7.png)
 
 ---
@@ -99,7 +101,7 @@ Zie onderstaande diagram voor de context van dit software systeem.
 
 Als we iets verder inzoomen op het software systeem dat ontwikkeld moet worden, dan komen we uit bij de onderstaande diagram:
 
-![Wildzone-C2 Container diagram drawio (1)](https://user-images.githubusercontent.com/73841047/143568140-c76727dd-a143-4314-a849-59b308bba449.png)
+![Wildzone-C2 Container diagram drawio (4)](https://user-images.githubusercontent.com/73841047/150634300-d865f22f-500b-4a29-bf22-1322ba6f63b8.png)
 
 ---
 
