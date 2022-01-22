@@ -460,7 +460,13 @@ CD neemt vervolgens deze code uit de repository, kan hier verschillende testen o
 
 #### CI/CD pipelines in dit project
 
-<h1>INVULLING VOLGT</H1>
+In dit project wordt er gebruik gemaakt van 2 pipelines. Een bedoeld voor de development branch, zodat de nieuw toegevoegde code getest kan worden en de code kwaliteit gechecked kan worden. De andere pipeline is bedoeld voor main. Deze pipeline is vergelijkbaar met die van de developement branch, zodra de twee testen succesvol zijn uitgevoerd dan wordt pas de microservice omgezet naar een Docker image en geüpload naar mijn <a href="https://hub.docker.com/u/jjuless">Docker Hub repository</a>. Als de testen niet succesvol worden doorlopen, dan wordt de Github action afgebroken en wordt er dus geen nieuwe image gemaakt.
+
+<p float="left">
+ <img src="https://user-images.githubusercontent.com/73841047/150634083-b890af2c-637e-450a-b6a1-a2dc8ba84a6b.png"/>
+ <img src="https://user-images.githubusercontent.com/73841047/150634097-89399f03-b707-4848-ac00-ea1674328ac2.png"/>
+ <img src="https://user-images.githubusercontent.com/73841047/150634109-7b085fa5-72cf-4f76-a3a2-985783fbd727.png"/>
+</p>
 
 ---
 
