@@ -12,17 +12,15 @@
   
   ## Inhoudsopgave
   
-  <h2 id="gedistribueerde">Gedistribueerde software</h2>
+<h1 id="persoonlijk">Persoonlijk project</h1>
   
-  *You can present an architecture that describes your system as a distributed software system and clearly makes use of important distributed architectural principles.* <br> **&** <br> *Your architecture describes the system on multiple levels: system overview, component overview, infrastructural overview, a dynamic and static overview of components*
+  <h2 id="gedistribueerde">Gedistribueerde software</h2>
   
   Zie onderstaande link voor het project overzicht / C4 model
   
 https://github.com/S3-IP-Jules-Houben-Fontys/Wildzone-documentation#c1-context
 
-*You divided your application into several components that each could run (in theory) on a separate server and have a clear single task in the system.*
-
-Niet alleen in theorie kunnen de componenten los draaien, maar de kunnen ook in de praktijk los van elkaar draaien. Elke service heeft zijn eigen image en kunnen getest worden in Docker
+Niet alleen in theorie kunnen de componenten los draaien, maar ze kunnen ook in de praktijk los van elkaar draaien. Elke service heeft zijn eigen image en kunnen getest worden in Docker
 
 ![image](https://user-images.githubusercontent.com/73841047/150634742-891346e2-fd64-40a5-a73a-d95b5026b8ab.png)
 
@@ -83,4 +81,58 @@ Info over kwaliteitsgarantie in dit project kan gevonden worden via de volgende 
 
 https://github.com/S3-IP-Jules-Houben-Fontys/Wildzone-documentation#8-kwaliteits-garantie
 
+Ik heb samen met <a href="https://www.linkedin.com/in/ruudfortuin/">Ruud Fortuin, Lead Software Developer bij ISAAC</a> een code review gedaan. De video hiervan is te vinden in canvas en in de portfolio zip file. Ruud heeft mij goed laten zien hoe een coding review werkt en hiervan heb ik ook veel geleerd.
 
+<table>
+  <tr>
+    <td><img src="https://user-images.githubusercontent.com/73841047/150645493-48a2cf55-88d1-4b6f-82e9-10ff18f5d283.png"></td>
+    <td><img src="https://user-images.githubusercontent.com/73841047/150645516-2de389aa-0975-4a42-914f-89010a00efb5.png"></td>
+  </tr>
+</table>
+
+<h2 id="release">Software release management</h2>
+
+Uitleg over software release management en het gebruik van Git(hub) in dit project kan hier gevonden worden:
+
+https://github.com/S3-IP-Jules-Houben-Fontys/Wildzone-documentation#9-software-release-managament--het-gebruik-van-github
+
+
+<h1 id="groep">Groepsproject</h1>
+
+In het groepsproject heb ik aan de back-end gewerkt. Hiervoor heb ik de meeste diagrammen samen met Rob of alleen gemaakt.
+
+De volgende diagrammen heb ik gemaakt met Rob:
+
+<table>
+  <tr>
+    <td><img src="https://user-images.githubusercontent.com/73841047/150644509-d4b78a1f-399d-46bf-a64a-2f811ebd104e.png"></td>
+    <td><img src="https://user-images.githubusercontent.com/73841047/150644511-86658eda-2452-4a67-9a21-7a7da5053ad1.png"></td>
+    <td><img src="https://user-images.githubusercontent.com/73841047/150644520-5ae5a2c9-51f7-46c0-be81-89e86fb832db.png"></td>
+  </tr>
+</table>
+
+De volgende diagrammen heb ik alleen gemaakt:
+
+<table>
+  <tr>
+    <td><img src="https://user-images.githubusercontent.com/73841047/150644668-96f41413-d934-4dbc-a9e3-8abe1152524c.png"></td>
+    <td><img src="https://user-images.githubusercontent.com/73841047/150644691-0715bd28-cccf-4333-908d-07ee879af0bb.png"></td>
+  </tr>
+</table>
+
+Om de back-end, en dan met name de API's, te documenteren heb ik de OpenAPI specificatie gemaakt, waarmee vervolgens met Postman een volledig en interactieve documentatie mee gegenereerd is geworden. Dit heb ik gedaan voor de volgende API's:
+
+- <a href="https://github.com/s3-db01/ISAAC-sensor-log-back-end">Sensor log API</a> deze heb ik alleen geprogrammeerd.
+- <a href="https://github.com/s3-db01/ISAAC-sensor-back-end">Sensor API</a>
+- <a href="https://github.com/s3-db01/ISAAC-floor-back-end">Floor API</a> deze heb ik samen met Rob geprogrammeerd.
+
+Zie de afbeeldingen hierbeneden als voorbeeld (hiervoor is de Floor API gebruikt):
+
+<table>
+  <tr>
+    <td><img src="https://user-images.githubusercontent.com/73841047/150645814-1ee72fce-a1b5-44b7-8a73-36c5f7dbb403.png"></td>
+    <td><img src="https://user-images.githubusercontent.com/73841047/150645888-7349794d-c740-42b6-a15c-f26c0c169b6f.png"></td>
+  </tr>
+</table>
+
+In het groepsproject ben ik de scrummaster geweest en heb ik dus iedere stand-up geleid. Daarbij heb ik ook alle opleveringen met de opdrachtgever ISAAC geleid.
