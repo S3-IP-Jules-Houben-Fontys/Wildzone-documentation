@@ -97,6 +97,12 @@ Uitleg over software release management en het gebruik van Git(hub) in dit proje
 
 https://github.com/S3-IP-Jules-Houben-Fontys/Wildzone-documentation#9-software-release-managament--het-gebruik-van-github
 
+Ik heb twee onderzoeken geschreven voor het persoonlijke project, deze zijn hier te vinden:
+
+<ul>
+  <li><a href="https://github.com/S3-IP-Jules-Houben-Fontys/Wildzone-documentation/blob/main/Fiverr-research.md">Fiverr research</a></li>
+  <li><a href="https://github.com/S3-IP-Jules-Houben-Fontys/Wildzone-documentation/blob/main/Security%20research.md">Security research</a></li>
+</ul>
 
 <h1 id="groep">Groepsproject</h1>
 
@@ -137,3 +143,10 @@ Zie de afbeeldingen hierbeneden als voorbeeld (hiervoor is de Floor API gebruikt
 </table>
 
 In het groepsproject ben ik de scrummaster geweest en heb ik dus iedere stand-up geleid. Daarbij heb ik ook alle opleveringen met de opdrachtgever ISAAC geleid.
+
+Voor het groepsproject heb ik 3 onderzoeken geschreven, namelijk:
+<ul>
+  <li>Cultuuronderzoek</li>
+  <li>Ethische analyse</li>
+  <li>Agile onderzoek</li>
+</ul>
