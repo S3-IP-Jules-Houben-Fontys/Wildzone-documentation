@@ -81,12 +81,13 @@ Info over kwaliteitsgarantie in dit project kan gevonden worden via de volgende 
 
 https://github.com/S3-IP-Jules-Houben-Fontys/Wildzone-documentation#8-kwaliteits-garantie
 
-Ik heb samen met <a href="https://www.linkedin.com/in/ruudfortuin/">Ruud Fortuin, Lead Software Developer bij ISAAC</a> een code review gedaan. De video hiervan is te vinden in canvas en in de portfolio zip file. Ruud heeft mij goed laten zien hoe een coding review werkt en hiervan heb ik ook veel geleerd.
+Ik heb samen met <a href="https://www.linkedin.com/in/ruudfortuin/">Ruud Fortuin, Lead Software Developer bij ISAAC</a> een code review gedaan. De video hiervan is te vinden in canvas en in de portfolio zip file. Ruud heeft mij goed laten zien hoe een coding review werkt en hiervan heb ik ook veel geleerd. Verder wordt de codequality gecontroleerd door sonarcloud
 
 <table>
   <tr>
     <td><img src="https://user-images.githubusercontent.com/73841047/150645493-48a2cf55-88d1-4b6f-82e9-10ff18f5d283.png"></td>
     <td><img src="https://user-images.githubusercontent.com/73841047/150645516-2de389aa-0975-4a42-914f-89010a00efb5.png"></td>
+    <td><img src="https://user-images.githubusercontent.com/73841047/150679355-1c99233b-51d8-4d7c-a6e5-51ee00b9c7b1.png"></td>
   </tr>
 </table>
 
